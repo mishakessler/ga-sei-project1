@@ -23,18 +23,20 @@ Each related term will use "OR" tags, while categories will be concatenated with
 ### Overview
 Immersive, fullwidth design with minimal content and backgrounds, a simple color palette, and advanced CSS elements such as box shadows, parralax scrolling, and interactice hover elements– putting the API-called content front and center, allowing for a pleasant viewing experience– will be utilized. For accessibility needs, MentalHealthable will feature full WCAG 2.0 compliance and restricted use of low-contrast or low-transparency elements.
 ### Pages
-*index.html
-*tech.html
-*apps.html
-*style.css
-*script.js
+* index.html
+* tech.html
+* apps.html
+* style.css
+* script.js
 ### Mockups
 Desktop Mockup:
-<img src="mockup-desktop.png">
+(./mockup-desktop.png)
+
 Tablet Mockup:
-<img src="mockup-tablet.png">
+(./mockup-tablet.png)
+
 Mobile Mockup:
-<img src="mobile-mockup.png">
+(./mobile-mockup.png)
 
 ## Content Delivery
 ### Hosting
