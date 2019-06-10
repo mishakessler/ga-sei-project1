@@ -25,6 +25,22 @@ Avoiding personal bias in keyword selection, MentalHealthable will create a main
 
 Each related term will use "OR" tags, while categories will be concatenated with an "AND" tag, as allowed by the advanced NewsAPI query, casting a wide net across news media and blogging websites. Certain anti-keywords will be utilized to avoid including any potentially triggering or graphic content. Category specific pages ("tech", "apps", etc.) would contain content specific to each category; a search function would be available to reference all queries in the NewsAPI database.
 
+### Terms
+
+* Health
+  * Mental Health
+  * Mental Healthcare
+  * Wellbeing
+  * Wellness
+  * Mindfullness
+  * Meditation
+  * Fitness
+  * Nutrition
+* Technology
+  * Technology
+  * Tech
+  * Apps
+  * 
 
 ---
 ## Design

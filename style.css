@@ -1,3 +1,73 @@
+
+/*
+brand fonts: Montserrat, Quattrocento Sans, Gruppo, Fredericka the Great;
+brand colors: #f6f7f4, #86b58c, #5c96be, #738494, #38404c;
+*/
+
 body {
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: #f6f7f4;
+}
+
+header h1, h6, li {
+  display: inline;
+}
+
+header li {
+  float: right;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section {
+  margin: 0 5vw;
+}
+
+.featuredImgDiv {
+  height: 50vh;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.articleSnippetDiv {
+  margin: -40px -40px;
+  padding: 60px 40px;
+  background-color: #f6f7f4;
+  border-top: 3px solid #38404c;
+  border-bottom: 3px solid #38404c;
+  box-shadow: 0 0 50px #38404c;
+  transform: skewY(3deg);
+}
+
+.articleSnippetDiv a {
+  background-color: #5c96be;
+  padding: 8px 14px;
+  margin: 25px;
+}
+
+.dark-section {
+  background-color: #738494;
+}
+
+.light-section {
+
+}
+
+.hero-section {
+
+}
+
+.editorpicks-section {
+  
+}
+
+.feed-section {
+
 }
