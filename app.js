@@ -8,13 +8,13 @@ const keywords = "mental health, wellness, wellbeing, mindfulness, meditation, t
 const query = `${keywords.replace(/, /g, " OR ")}`
 const queryURL = encodeURIComponent(query);
 
-const antiKeywords = "NOT trump, NOT goop, NOT committed";
+const antiKeywords = "NOT trump, NOT goop, NOT committed, NOT surveillance";
 const antiQuery = `${antiKeywords.replace(/, /g, " AND ")}`
 const antiQueryURL = encodeURIComponent(antiQuery);
 
 const searchURL = `${domain}${everything}sortBy=popularity&q=${antiKeywords}%20AND%20`
-const trendingURL = `${domain}${trending}q=mental%20health`
-const everythingURL = `${domain}${everything}q=${queryURL}%20AND%20${antiQueryURL}&sortBy=popularity`
+const trendingURL = `${domain}${trending}q=mental%20health&sortBy=relevance`
+const everythingURL = `${domain}${everything}q=${queryURL}%20AND%20${antiQueryURL}&sortBy=relevance`
 
 //ie https://newsapi.org/v2/everything?q=mental%20health%20OR%20wellness%20OR%20mindfulness%20OR%20meditation%20OR%20tech%20OR%20apps%20AND%20NOT%20trump%20AND%20NOT%20goop%20AND%20NOT%20committed
 
@@ -194,3 +194,4 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 }
+

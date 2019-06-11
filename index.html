@@ -7,6 +7,7 @@
   <link
     href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Gruppo|Montserrat:100,200,300,400,500,600,700,800,900|Quattrocento+Sans&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="app.js"></script>
@@ -15,14 +16,12 @@
 
 <body>
   <header>
-    <nav id="primaryNav">
-      <h1> <a href="index.html">MentalHealthable</a></h1>
-      <!-- <img id="logo" src="_assets/mockup-desktop.png"> -->
+    <nav class="navClass" id="primaryNav">
+      <h1><a href="index.html" id="home">MentalHealthable</a></h1>
+      <li><a href="/index.html">Refresh</a></li>
       <li><a href="#searching" id="searchCTA">Search</a></li>
       <li><a href="#thelatest">The Latest</a></li>
       <li><a href="#trending">Trending</a></li>
-      <!-- <li><a href="#editorspicks">Editors' Picks</a></li> -->
-      <li><a href="index.html">Home</a></li>
     </nav>
     <tagline>
       <h6><em>a curated feed for all things tech & wellness</em></h6>
@@ -87,11 +86,12 @@
 
   <footer id="footerbar">
     <div id="footernav">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="#home">Home</a></li>
       <!-- <li><a href="#editorspicks">Editors' Picks</a></li> -->
       <li><a href="#trending">Trending</a></li>
       <li><a href="#thelatest">The Latest</a></li>
       <li><a href="#searching" id="searchCTA">Search</a></li>
+      <li><a href="/index.html">Refresh</a></li>
     </div>
     <button id="hi"></button>
   </footer>

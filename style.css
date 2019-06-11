@@ -88,7 +88,7 @@ section {
 .section-title {
   margin-right: 2vw;
   margin-top: 125px;
-  margin-bottom: -25px;
+  margin-bottom: -30px;
   transform: skewY(3deg);
 }
 
@@ -97,7 +97,7 @@ section {
   text-align: right;
   text-transform: uppercase;
   color: #00000033;
-  font-size: 7vw;
+  font-size: 8em;
   font-weight: 900;
   line-height: .9;
   transition: ease-in-out .25s;
@@ -123,7 +123,7 @@ section {
 }
 
 
-
+/* 
 .hero-section {
 }
 
@@ -156,16 +156,15 @@ section {
 }
 
 .feed-section {
-}
+} */
 
 .featuredImgDiv, .trendingImgDiv, .resultingImgDiv {
-  height: 70vh;
+  height: 90vh;
   box-shadow: 0 0 10px #38404c;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
   background-repeat: none;
-  
 }
 
 .articleSnippetDiv, .trendingSnippetDiv, .resultingSnippetDiv {
@@ -194,7 +193,7 @@ section {
 }
 
 .articleSnippetDiv a, .trendingSnippetDiv a, .resultingSnippetDiv a, .editorpicks-section a {
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
   color: #f6f7f4;
@@ -252,6 +251,7 @@ section {
   margin: 10px;
   color: #5c96be;
   font-size: 1.2em;
+  letter-spacing: 1px;
   text-transform: uppercase;
   border: 2px solid #f6f7f4;
   border-radius: 4px;
@@ -334,3 +334,91 @@ footer li a:hover {
 }
  
 
+/********************  Media Queries  ********************/
+
+@media screen and (min-width: 1690px) {
+
+}
+
+@media screen and (max-width: 980px) {
+  
+  header li {
+    display: none;
+  }
+
+  .section-title {
+    margin-top: 50px;
+  }
+
+  .section-title h2 {
+    font-size: 7em;
+  }
+
+  #thelatest {
+    margin-top: 150px;
+  }
+
+  #searching {
+    margin-top: 150px;
+  }
+
+}
+
+
+@media screen and (max-width: 736px) {
+  
+  .section-title h2 {
+    font-size: 5.25em;
+  }
+
+  .featuredImgDiv, .trendingImgDiv, .resultingImgDiv {
+    height: 80vh;
+  }
+
+  #footerbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  header h1 {
+    font-size: 2em
+  }
+    
+  header h6 {
+    font-size: 1.1em;
+  }
+
+  .section-title {
+    margin-top: 75px;
+  }
+
+  #thelatest {
+    margin-top: 125px;
+    margin-bottom: 25px;
+  }
+
+  #searching {
+    margin-top: 125px;
+    margin-bottom: 25px;
+  }
+
+  .section-title h2 {
+    font-size: 3.5em;
+    text-align: center;
+  }
+
+  .articleSnippetDiv a, .trendingSnippetDiv a, .resultingSnippetDiv a, .editorpicks-section a {
+    padding: 12px 30px;
+  }
+
+  #queryBox {
+    padding: 12px 30px;
+  }
+
+  #searchBtn {
+    padding: 12px 30px;
+  }
+
+}
