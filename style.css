@@ -55,6 +55,10 @@ header li a {
   font-weight: 300;
   letter-spacing: 1px;
   border-radius: 5px;
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
 }
 
 header li a:hover {
@@ -66,7 +70,7 @@ header li a:hover {
   -webkit-animation: ease-in-out .25s;
 }
 
-#searchbtn {
+#searchCTA {
   border: 1px solid white;
 }
 
@@ -75,7 +79,7 @@ header li a:hover {
 main {
   max-width: 80vw;
   margin: 0 auto 100px auto;
-  text-align: left;
+  text-align: center;
 }
 
 section {
@@ -84,6 +88,7 @@ section {
 
 .section-title h2 {
   margin-right: -8vw;
+  margin-top: 100px;
   margin-bottom: 25px;
   font-family: "Montserrat", sans-serif;
   text-align: right;
@@ -93,7 +98,10 @@ section {
   font-weight: 900;
   line-height: .9;
   transform: skewY(3deg);
-  /* text-shadow: 0 0 10px #38404c85; */
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
 }
 
 .section-title h2:hover {
@@ -109,27 +117,23 @@ section {
 }
 
 .light-section {
-
+  background-color: #f6f7f4;
 }
-
+/* 
 .hero-section {
-
 }
 
 .trending-section {
-  z-index: -1;
 }
 
 .editorpicks-section {
-  z-index: -1;
 }
 
 .feed-section {
-  text-align: center;
-  z-index: -1;
 }
+*/
 
-.featuredImgDiv, .trendingImgDiv {
+.featuredImgDiv, .trendingImgDiv, .resultingImgDiv {
   height: 70vh;
   box-shadow: 0 0 10px #38404c;
   background-attachment: fixed;
@@ -138,7 +142,7 @@ section {
   background-repeat: none;
 }
 
-.articleSnippetDiv, .trendingSnippetDiv {
+.articleSnippetDiv, .trendingSnippetDiv, .resultingSnippetDiv {
   margin: -40px -40px;
   padding: 60px 40px;
   background-color: #f6f7f4;
@@ -148,27 +152,32 @@ section {
   transform: skewY(3deg);
 }
 
-.articleSnippetDiv h3, .trendingSnippetDiv h3 {
+.articleSnippetDiv h3, .trendingSnippetDiv h3, .resultingSnippetDiv h3 {
   font-size: 18px;
   text-transform: capitalize;
 }
 
-.articleSnippetDiv p, .trendingSnippetDiv p {
+.articleSnippetDiv p, .trendingSnippetDiv p, .resultingSnippetDiv p {
   margin: 0 0 35px 0;
 }
 
-.articleSnippetDiv a, .trendingSnippetDiv a {
+.articleSnippetDiv a, .trendingSnippetDiv a, .resultingSnippetDiv a {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: #f6f7f4;
   background-color: #5c96be;
   padding: 8px 14px;
+  border: 2px solid #f6f7f4;
   border-radius: 5px;
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
 }
 
-.articleSnippetDiv a:hover, .trendingSnippetDiv a:hover {
-  background-color: #fff;
+.articleSnippetDiv a:hover, .trendingSnippetDiv a:hover, .resultingSnippetDiv a:hover {
+  background-color: #f6f7f4;
   color: #5c96be;
   border: 2px solid #5c96be;
   transition: ease-in-out .25s;
@@ -177,16 +186,68 @@ section {
   -webkit-animation: ease-in-out .25s;
 }
 
-/* .articleDateDiv {
-  position: absolute;
-  float: right;
-} */
+.search-div {
+  margin-bottom: 25px;
+}
+
+#queryBox {
+  padding: 8px 12px;
+  margin: 10px;
+  color: white;
+  font-size: 1.2em;
+  background-color: transparent;
+  border: 2px solid #f6f7f4;
+  border-radius: 4px;
+  /**/
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
+}
+
+#queryBox:focus {
+  color: #5c96be;
+  background-color: #f6f7f4;
+  /**/
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
+}
+
+#searchBtn {
+  padding: 8px 12px;
+  margin: 10px;
+  color: #5c96be;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  border: 2px solid #f6f7f4;
+  border-radius: 4px;
+  /**/
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
+}
+
+#searchBtn:hover {
+  color: white;
+  background-color: transparent;
+  /**/
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
+}
+
+/********************  Footer  ********************/
 
 footer {
   position: sticky;
   bottom: 0;
   padding: 25px;
   text-align: center;
+  background: linear-gradient(#5c97be00, #5c96be)
 }
 
 footer li {
@@ -204,16 +265,31 @@ footer li a {
   padding: 10px 14px;
   text-transform: uppercase;
   font-size: 1.1em;
-  font-weight: 300;
+  font-weight: 350;
   letter-spacing: 1px;
   border-radius: 5px;
+  text-shadow: 0 0 10px #38404c;
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
 }
 
 footer li a:hover {
   background-color: white;
   color: #5c97be;
+  text-shadow: none;
   transition: ease-in-out .25s;
   -moz-animation: ease-in-out .25s;
   -o-animation: ease-in-out .25s;
   -webkit-animation: ease-in-out .25s;
+}
+
+#hi {
+  position: fixed;
+  background: none;
+  height: 15px;
+  width: 10px;
+  right: 2px;
+  bottom: 2px;
 }

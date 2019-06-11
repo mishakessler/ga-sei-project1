@@ -12,6 +12,7 @@ const antiKeywords = "NOT trump, NOT goop, NOT committed, NOT surveillance, NOT 
 const antiQuery = `${antiKeywords.replace(/, /g, " AND ")}`
 const antiQueryURL = encodeURIComponent(antiQuery);
 
+const searchURL = `${domain}${everything}q=`
 const trendingURL = `${domain}${trending}q="mental%20health"`
 const everythingURL = `${domain}${everything}q=${queryURL}%20AND%20${antiQueryURL}&sortBy=relevance`
 
@@ -21,37 +22,63 @@ const searchSection = document.querySelector(".search-section");
 const trendingSection = document.querySelector(".trending-section");
 const feedSection = document.querySelector(".feed-section");
 
-
 // **************
 // RENDER SEARCH
 // **************
 
-// const searchArticles = async (query) => {
-//   const responseSearch = await axios(`${BASE_URL}q=${query}&`);
-//   searchArticles.unshift(responseSearch.data);
-//   render(searchArticles);
-// };
+const renderSearch = async (input) => {
+  // searchArray = [];
+  const searchResponse = await axios.get(`${searchURL}q="mental%20health"%20AND%20${input.replace(/" "/g, "%20")}`,
+    {
+      headers: {
+        Authorization: `Bearer ${apiKey}`
+      },
+    }
+  );
 
-// const btn = document.querySelector('button');
-// btn.addEventListener('click', (ev) => {
-//   ev.preventDefault();
-//   const input = document.querySelector('input');
-//   searchArticles(input.value);
-// });
+  const searches = searchResponse.data.articles;
 
+  for (let n = 0; n < searches.length; n += 1) {
+
+    const resultImg = document.createElement('div');
+    resultImg.className = "resultingImgDiv";
+    resultImg.style.backgroundImage = `url(${searches[n].urlToImage})`;
+
+    searchSection.append(resultImg);
+
+    const resultSnippet = document.createElement('div');
+    resultSnippet.className = "resultingSnippetDiv";
+    resultSnippet.innerHTML = `
+    <h3>${searches[n].title}</h3>
+    <h5>from ${searches[n].source.name}</h5>
+    <p>${searches[n].description}...</p>
+    <a href="${searches[n].url}" target="_blank">Read More</a>
+    `;
+
+    searchSection.append(resultSnippet);
+  }
+}
+
+const searchBtn = document.querySelector('#searchBtn');
+searchBtn.addEventListener('click', (ev) => {
+  ev.preventDefault();
+  const input = document.querySelector('#queryBox');
+  renderSearch(input.value);
+});
 
 // ****************
 // RENDER TRENDING
 // ****************
 
 const renderTrending = async () => {
-  const responseTrending = await axios.get(trendingURL,
+  const trendingResponse = await axios.get(trendingURL,
     {
       headers: {
         Authorization: `Bearer ${apiKey}`
       },
     });
-  const trendings = responseTrending.data.articles;
+
+  const trendings = trendingResponse.data.articles;
 
   for (let j = 0; j < trendings.length; j += 1) {
 
@@ -64,10 +91,11 @@ const renderTrending = async () => {
     const trendingSnippet = document.createElement(`div`);
     trendingSnippet.className = "trendingSnippetDiv"
     trendingSnippet.innerHTML = `
-  <h3>${trendings[j].title}</h3>
-  <p>${trendings[j].description}...</p>
-  <a href="${trendings[j].url}" target="_blank">Read More</a>
-  `;
+    <h3>${trendings[j].title}</h3>
+    <h5>${trendings[j].source.name}</h5>
+    <p>${trendings[j].description}...</p>
+    <a href="${trendings[j].url}" target="_blank">Read More</a>
+    `;
     trendingSection.append(trendingSnippet);
   }
   // if (trendings === true) {
@@ -116,6 +144,7 @@ const renderArticles = async () => {
     articleSnippet.className = "articleSnippetDiv"
     articleSnippet.innerHTML = `
     <h3>${articles[i].title}</h3>
+    <h5>from ${articles[i].source.name}</h5>
     <p>${articles[i].description}...</p>
     <a href="${articles[i].url}" target="_blank">Read More</a>
     `;

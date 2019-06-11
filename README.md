@@ -76,3 +76,11 @@ Dreamhost VPS _(if allowed, in lieu of Surge)_
 ### Domain
 
 https://www.mentalhealthable.com
+
+---
+
+# Task List
+
+* Add search function to bottom of page
+* Add js hide until scroll for footer menu
+* Add responsiveness– headers, menus, img div heights, etc.
