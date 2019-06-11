@@ -77,7 +77,6 @@ header li a:hover {
 /********************  Main  ********************/
 
 main {
-  max-width: 80vw;
   margin: 0 auto 100px auto;
   text-align: center;
 }
@@ -86,10 +85,14 @@ section {
   margin: 0 5vw;
 }
 
+.section-title {
+  margin-right: 2vw;
+  margin-top: 125px;
+  margin-bottom: -25px;
+  transform: skewY(3deg);
+}
+
 .section-title h2 {
-  margin-right: -8vw;
-  margin-top: 100px;
-  margin-bottom: 25px;
   font-family: "Montserrat", sans-serif;
   text-align: right;
   text-transform: uppercase;
@@ -97,7 +100,6 @@ section {
   font-size: 7vw;
   font-weight: 900;
   line-height: .9;
-  transform: skewY(3deg);
   transition: ease-in-out .25s;
   -moz-animation: ease-in-out .25s;
   -o-animation: ease-in-out .25s;
@@ -119,7 +121,9 @@ section {
 .light-section {
   background-color: #f6f7f4;
 }
-/* 
+
+
+
 .hero-section {
 }
 
@@ -127,11 +131,32 @@ section {
 }
 
 .editorpicks-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 40px;
+  background: linear-gradient(#00000085, #000000), url(/_assets/Kinckerbocker_1.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.editorpicks-section div {
+  width: 32%;
+}
+
+#column1, #column2, #column3 {
+  padding: 20px;
+  height: 150px;
+}
+
+#column1 h3, #column2 h3, #column3 h3 {
+  color: white;
+  padding-bottom: 25px;
 }
 
 .feed-section {
 }
-*/
 
 .featuredImgDiv, .trendingImgDiv, .resultingImgDiv {
   height: 70vh;
@@ -140,28 +165,35 @@ section {
   background-position: center center;
   background-size: cover;
   background-repeat: none;
+  
 }
 
 .articleSnippetDiv, .trendingSnippetDiv, .resultingSnippetDiv {
   margin: -40px -40px;
   padding: 60px 40px;
   background-color: #f6f7f4;
-  /* border-top: 2px solid #5c96be;
-  border-bottom: 2px solid #5c96be; */
+  border-top: 5px solid #5c96be;
+  border-bottom: 5px solid #5c96be;
   box-shadow: 0 0 30px #38404c;
   transform: skewY(3deg);
 }
 
-.articleSnippetDiv h3, .trendingSnippetDiv h3, .resultingSnippetDiv h3 {
-  font-size: 18px;
+.articleSnippetDiv h3, .trendingSnippetDiv h3, .resultingSnippetDiv h3, .editorpicks-section h3 {
+  font-size: 1.2em;
   text-transform: capitalize;
 }
 
-.articleSnippetDiv p, .trendingSnippetDiv p, .resultingSnippetDiv p {
+.articleSnippetDiv h5, .trendingSnippetDiv h5, .resultingSnippetDiv h5, .editorpicks-section h5 {
+  text-transform: lowercase;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.articleSnippetDiv p, .trendingSnippetDiv p, .resultingSnippetDiv p, .editorpicks-section p {
   margin: 0 0 35px 0;
 }
 
-.articleSnippetDiv a, .trendingSnippetDiv a, .resultingSnippetDiv a {
+.articleSnippetDiv a, .trendingSnippetDiv a, .resultingSnippetDiv a, .editorpicks-section a {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
@@ -176,7 +208,7 @@ section {
   -webkit-animation: ease-in-out .25s;
 }
 
-.articleSnippetDiv a:hover, .trendingSnippetDiv a:hover, .resultingSnippetDiv a:hover {
+.articleSnippetDiv a:hover, .trendingSnippetDiv a:hover, .resultingSnippetDiv a:hover, .editorpicks-section a:hover {
   background-color: #f6f7f4;
   color: #5c96be;
   border: 2px solid #5c96be;
@@ -186,7 +218,7 @@ section {
   -webkit-animation: ease-in-out .25s;
 }
 
-.search-div {
+.query-div {
   margin-bottom: 25px;
 }
 
@@ -293,3 +325,12 @@ footer li a:hover {
   right: 2px;
   bottom: 2px;
 }
+
+#footerbar {
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
+}
+ 
+

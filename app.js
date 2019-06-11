@@ -8,16 +8,17 @@ const keywords = "mental health, wellness, wellbeing, mindfulness, meditation, t
 const query = `${keywords.replace(/, /g, " OR ")}`
 const queryURL = encodeURIComponent(query);
 
-const antiKeywords = "NOT trump, NOT goop, NOT committed, NOT surveillance, NOT bof";
+const antiKeywords = "NOT trump, NOT goop, NOT committed";
 const antiQuery = `${antiKeywords.replace(/, /g, " AND ")}`
 const antiQueryURL = encodeURIComponent(antiQuery);
 
-const searchURL = `${domain}${everything}q=`
-const trendingURL = `${domain}${trending}q="mental%20health"`
-const everythingURL = `${domain}${everything}q=${queryURL}%20AND%20${antiQueryURL}&sortBy=relevance`
+const searchURL = `${domain}${everything}sortBy=popularity&q=${antiKeywords}%20AND%20`
+const trendingURL = `${domain}${trending}q=mental%20health`
+const everythingURL = `${domain}${everything}q=${queryURL}%20AND%20${antiQueryURL}&sortBy=popularity`
 
 //ie https://newsapi.org/v2/everything?q=mental%20health%20OR%20wellness%20OR%20mindfulness%20OR%20meditation%20OR%20tech%20OR%20apps%20AND%20NOT%20trump%20AND%20NOT%20goop%20AND%20NOT%20committed
 
+const footerSection = document.querySelector("#footerbar")
 const searchSection = document.querySelector(".search-section");
 const trendingSection = document.querySelector(".trending-section");
 const feedSection = document.querySelector(".feed-section");
@@ -27,7 +28,8 @@ const feedSection = document.querySelector(".feed-section");
 // **************
 
 const renderSearch = async (input) => {
-  // searchArray = [];
+
+  searchSection.innerHTML = [];
   const searchResponse = await axios.get(`${searchURL}q="mental%20health"%20AND%20${input.replace(/" "/g, "%20")}`,
     {
       headers: {
@@ -92,7 +94,7 @@ const renderTrending = async () => {
     trendingSnippet.className = "trendingSnippetDiv"
     trendingSnippet.innerHTML = `
     <h3>${trendings[j].title}</h3>
-    <h5>${trendings[j].source.name}</h5>
+    <h5>from ${trendings[j].source.name}</h5>
     <p>${trendings[j].description}...</p>
     <a href="${trendings[j].url}" target="_blank">Read More</a>
     `;
@@ -155,3 +157,40 @@ const renderArticles = async () => {
 
 renderArticles();
 
+
+
+// const hiBtn = document.querySelector('#hi');
+// hiBtn.addEventListener('click', (ev) => {
+//   console.log("clicked");
+//   ev.preventDefault();
+//   const hiPanda = document.createElement('div');
+//   hiPanda.className = "hiPanda";
+//   hiPanda.innerHTML = `<img src="https://media.giphy.com/media/oVpjKztlM9joc/giphy.gif">`;
+//   const hiPandaImg = hiPanda.img;
+//   hiPanda.style.position = "absolute";
+//   hiPanda.style.Width = "100vw";
+//   hiPanda.style.Height = "100vh";
+//   hiPanda.style.top = 5;
+//   hiPanda.style.zIndex = 10;
+
+//   footerSection.appendChild(hiPanda);
+// });
+
+
+
+// *******************
+// FOOTER MENU SCROLL
+// *******************
+// By W3 Schools
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos < currentScrollPos) {
+    document.querySelector("#footerbar").style.bottom = "-60px";
+  } else {
+    document.querySelector("#footerbar").style.bottom = "0";
+  }
+  prevScrollpos = currentScrollPos;
+}
