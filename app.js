@@ -100,13 +100,6 @@ const renderTrending = async () => {
     `;
     trendingSection.append(trendingSnippet);
   }
-  // if (trendings === true) {
-  //   renderTrending();
-  // }
-  // else {
-  //   const emptyTrendings = document.querySelector(".trending-section");
-  //   emptyTrendings.style.display = "none";
-  // }
 }
 
 renderTrending();
@@ -136,12 +129,6 @@ const renderArticles = async () => {
 
     feedSection.append(featuredImg);
 
-    // const articleDate = document.createElement(`div`);
-    // articleDate.className = "articleDateDiv";
-    // articleDate.innerHTML = `${articles[i].publishedAt}.replace()`;
-
-    // feedSection.append(articleDate);
-
     const articleSnippet = document.createElement(`div`);
     articleSnippet.className = "articleSnippetDiv"
     articleSnippet.innerHTML = `
@@ -156,26 +143,6 @@ const renderArticles = async () => {
 }
 
 renderArticles();
-
-
-
-// const hiBtn = document.querySelector('#hi');
-// hiBtn.addEventListener('click', (ev) => {
-//   console.log("clicked");
-//   ev.preventDefault();
-//   const hiPanda = document.createElement('div');
-//   hiPanda.className = "hiPanda";
-//   hiPanda.innerHTML = `<img src="https://media.giphy.com/media/oVpjKztlM9joc/giphy.gif">`;
-//   const hiPandaImg = hiPanda.img;
-//   hiPanda.style.position = "absolute";
-//   hiPanda.style.Width = "100vw";
-//   hiPanda.style.Height = "100vh";
-//   hiPanda.style.top = 5;
-//   hiPanda.style.zIndex = 10;
-
-//   footerSection.appendChild(hiPanda);
-// });
-
 
 
 // *******************
