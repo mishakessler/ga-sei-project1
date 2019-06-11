@@ -16,40 +16,60 @@
 
 <body>
   <header>
-    <nav>
-      <H1>MentalHealthable</H1>
-      <h6><em>a curated feed for all things tech & wellness</em></h6>
+    <nav id="primaryNav">
+      <h1> <a href="index.html">MentalHealthable</a></h1>
       <!-- <img id="logo" src="_assets/mockup-desktop.png"> -->
-      <li><a href="search.html">Search</a></li>
+      <li><a href="#search" id="searchbtn">Search</a></li>
+      <li><a href="#thelatest">The Latest</a></li>
+      <li><a href="#trending">Trending</a></li>
+      <li><a href="#editorspicks">Editors' Picks</a></li>
       <li><a href="index.html">Home</a></li>
     </nav>
+    <tagline>
+      <h6><em>a curated feed for all things tech & wellness</em></h6>
+    </tagline>
   </header>
 
   <main>
     <section class="hero-section">
-      <h2>Hero Section</h2>
+      <!-- <h2>Hero Section</h2> -->
     </section>
 
-    <section class="trending-section" class="dark-section">
-      <h2>Trending in Mental Health</h2>
-    </section>
-
-    <section class="editorpicks-section" class="light-section">
+    <section class="section-title" id="editorspicks">
       <h2>Editors' Picks</h2>
     </section>
 
-    <section class="feed-section" class="dark-section">
+    <section class="editorpicks-section">
+    </section>
+
+    <section class="section-title" id="trending">
+      <h2>Trending in Mental Health</h2>
+    </section>
+
+    <section class="trending-section">
+    </section>
+
+    <section class="section-title" id="thelatest">
       <h2>The Latest</h2>
-      <!-- <button>Tech</button>
-      <button>Mobile Apps</button>
-      <button>Social Media</button> -->
+    </section>
+
+    <section class="feed-section">
+    </section>
+
+    <section class="search-list" id="searchbtn">
     </section>
 
     <button id="hi"></button>
   </main>
 
   <footer>
-    <p>Designed by Misha Kessler</p>
+    <div id="footernav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#editorspicks">Editors' Picks</a></li>
+      <li><a href="#trending">Trending</a></li>
+      <li><a href="#thelatest">The Latest</a></li>
+      <li><a href="#search" id="searchbtn">Search</a></li>
+    </div>
   </footer>
 </body>
 

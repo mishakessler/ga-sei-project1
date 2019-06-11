@@ -4,52 +4,104 @@ brand fonts: Montserrat, Quattrocento Sans, Gruppo, Fredericka the Great;
 brand colors: #f6f7f4, #86b58c, #5c96be, #738494, #38404c;
 */
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  background-color: #f6f7f4;
+html {
+  scroll-behavior: smooth;
 }
 
-header h1, h6, li {
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  background-color: #5c96be;
+}
+
+/********************  Header  ********************/
+
+header {
+  height: 50px;
+  margin: 10px 15px;
+}
+
+header h1 {
   display: inline;
+  /* margin: 0 15px; */
+  font-size: 2.5em;
+}
+
+header h6 {
+  display: inline;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: white;
 }
 
 header li {
+  display: inline-flex;
   float: right;
+  margin-top: 15px;
 }
 
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header li a {
+  margin: 0px 10px;
+  padding: 10px 14px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+header li a:hover {
+  background-color: white;
+  color: #5c97be;
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
+}
+
+#searchbtn {
+  border: 1px solid white;
+}
+
+/********************  Main  ********************/
+
 main {
-  max-width: 1080px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 80vw;
+  margin: 0 auto 100px auto;
+  text-align: left;
 }
 
 section {
   margin: 0 5vw;
 }
 
-.featuredImgDiv {
-  height: 50vh;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: none;
-}
-
-.articleSnippetDiv {
-  margin: -40px -40px;
-  padding: 60px 40px;
-  background-color: #f6f7f4;
-  border-top: 3px solid #38404c;
-  border-bottom: 3px solid #38404c;
-  box-shadow: 0 0 50px #38404c;
+.section-title h2 {
+  margin-right: -8vw;
+  margin-bottom: 25px;
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+  text-transform: uppercase;
+  color: #00000033;
+  font-size: 7vw;
+  font-weight: 900;
+  line-height: .9;
   transform: skewY(3deg);
+  /* text-shadow: 0 0 10px #38404c85; */
 }
 
-.articleSnippetDiv a {
-  background-color: #5c96be;
-  padding: 8px 14px;
-  margin: 25px;
+.section-title h2:hover {
+  color: #ffffff85;
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
 }
 
 .dark-section {
@@ -64,10 +116,104 @@ section {
 
 }
 
+.trending-section {
+  z-index: -1;
+}
+
 .editorpicks-section {
-  
+  z-index: -1;
 }
 
 .feed-section {
+  text-align: center;
+  z-index: -1;
+}
 
+.featuredImgDiv, .trendingImgDiv {
+  height: 70vh;
+  box-shadow: 0 0 10px #38404c;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.articleSnippetDiv, .trendingSnippetDiv {
+  margin: -40px -40px;
+  padding: 60px 40px;
+  background-color: #f6f7f4;
+  /* border-top: 2px solid #5c96be;
+  border-bottom: 2px solid #5c96be; */
+  box-shadow: 0 0 30px #38404c;
+  transform: skewY(3deg);
+}
+
+.articleSnippetDiv h3, .trendingSnippetDiv h3 {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.articleSnippetDiv p, .trendingSnippetDiv p {
+  margin: 0 0 35px 0;
+}
+
+.articleSnippetDiv a, .trendingSnippetDiv a {
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #5c96be;
+  padding: 8px 14px;
+  border-radius: 5px;
+}
+
+.articleSnippetDiv a:hover, .trendingSnippetDiv a:hover {
+  background-color: #fff;
+  color: #5c96be;
+  border: 2px solid #5c96be;
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
+}
+
+/* .articleDateDiv {
+  position: absolute;
+  float: right;
+} */
+
+footer {
+  position: sticky;
+  bottom: 0;
+  padding: 25px;
+  text-align: center;
+}
+
+footer li {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer li a {
+  margin: 0px 10px;
+  padding: 10px 14px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+footer li a:hover {
+  background-color: white;
+  color: #5c97be;
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
 }
