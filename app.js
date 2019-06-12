@@ -104,6 +104,14 @@ const renderTrending = async () => {
 
 renderTrending();
 
+// ***************
+// REFRESH BUTTON
+// ***************
+
+const refreshBtn = document.querySelector('#refreshFooterIcon');
+refreshBtn.addEventListener('click', () => {
+  renderTrending();
+});
 
 // ************
 // RENDER FEED

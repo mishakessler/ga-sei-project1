@@ -290,6 +290,7 @@ section {
   padding: 8px 12px;
   margin: 10px;
   color: #5c96be;
+  background-color: #f6f7f4;
   font-size: 1.2em;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -428,8 +429,12 @@ footer li a:hover {
   }
 
   .featuredImgDiv, .trendingImgDiv, .resultingImgDiv {
-    height: 80vh;
-  }
+    height: 70vh;
+    background-attachment: fixed;
+    background-position: center center;
+    object-fit: cover;
+    background-repeat: none;
+    }
 
   #footerNav {
     display: none;
