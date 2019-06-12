@@ -1,3 +1,4 @@
+@charset "utf-8";
 
 /*
 brand fonts: Montserrat, Quattrocento Sans, Gruppo, Fredericka the Great;
@@ -55,6 +56,7 @@ header li a {
   font-weight: 300;
   letter-spacing: 1px;
   border-radius: 5px;
+  /**/
   transition: ease-in-out .25s;
   -moz-animation: ease-in-out .25s;
   -o-animation: ease-in-out .25s;
@@ -64,6 +66,7 @@ header li a {
 header li a:hover {
   background-color: white;
   color: #5c97be;
+  /**/
   transition: ease-in-out .25s;
   -moz-animation: ease-in-out .25s;
   -o-animation: ease-in-out .25s;
@@ -72,6 +75,75 @@ header li a:hover {
 
 #searchCTA {
   border: 1px solid white;
+}
+
+#refreshNavIcon {
+  margin-top: 5px;
+  height: 5px;
+  width: 5px;
+  background: url(/_assets/refreshicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#refreshNavIcon:hover {
+
+  /**/
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
+}
+
+#refreshFooterIcon {
+  margin-top: 4px;
+  margin-left: 20px;
+  height: 6px;
+  width: 6px;
+  background: url(/_assets/refreshicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /**/
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
+}
+
+#refreshFooterIcon:hover {
+
+  /**/
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
+}
+
+#scrollToTopIcon {
+  margin-top: 4px;
+  margin-right: 20px;
+  height: 6px;
+  width: 6px;
+  background: url(/_assets/scrolltotop.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /**/
+  transition: ease-in-out .25s;
+  -moz-animation: ease-in-out .25s;
+  -o-animation: ease-in-out .25s;
+  -webkit-animation: ease-in-out .25s;
+}
+
+#scrollToTopIcon:hover {
+    
+    /**/
+    transition: ease-in-out .25s;
+    -moz-animation: ease-in-out .25s;
+    -o-animation: ease-in-out .25s;
+    -webkit-animation: ease-in-out .25s;
 }
 
 /********************  Main  ********************/
@@ -100,6 +172,7 @@ section {
   font-size: 8em;
   font-weight: 900;
   line-height: .9;
+  /**/
   transition: ease-in-out .25s;
   -moz-animation: ease-in-out .25s;
   -o-animation: ease-in-out .25s;
@@ -108,6 +181,7 @@ section {
 
 .section-title h2:hover {
   color: #ffffff85;
+  /**/
   transition: ease-in-out .25s;
   -moz-animation: ease-in-out .25s;
   -o-animation: ease-in-out .25s;
@@ -122,42 +196,6 @@ section {
   background-color: #f6f7f4;
 }
 
-
-/* 
-.hero-section {
-}
-
-.trending-section {
-}
-
-.editorpicks-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0 auto;
-  padding: 40px;
-  background: linear-gradient(#00000085, #000000), url(/_assets/Kinckerbocker_1.jpg);
-  background-size: cover;
-  background-position: center center;
-}
-
-.editorpicks-section div {
-  width: 32%;
-}
-
-#column1, #column2, #column3 {
-  padding: 20px;
-  height: 150px;
-}
-
-#column1 h3, #column2 h3, #column3 h3 {
-  color: white;
-  padding-bottom: 25px;
-}
-
-.feed-section {
-} */
-
 .featuredImgDiv, .trendingImgDiv, .resultingImgDiv {
   height: 90vh;
   box-shadow: 0 0 10px #38404c;
@@ -169,7 +207,7 @@ section {
 
 .articleSnippetDiv, .trendingSnippetDiv, .resultingSnippetDiv {
   margin: -40px -40px;
-  padding: 60px 40px;
+  padding: 60px 50px;
   background-color: #f6f7f4;
   border-top: 5px solid #5c96be;
   border-bottom: 5px solid #5c96be;
@@ -189,7 +227,7 @@ section {
 }
 
 .articleSnippetDiv p, .trendingSnippetDiv p, .resultingSnippetDiv p, .editorpicks-section p {
-  margin: 0 0 35px 0;
+  margin: 0 35px 35px 35px;
 }
 
 .articleSnippetDiv a, .trendingSnippetDiv a, .resultingSnippetDiv a, .editorpicks-section a {
@@ -201,6 +239,7 @@ section {
   padding: 8px 14px;
   border: 2px solid #f6f7f4;
   border-radius: 5px;
+  /**/
   transition: ease-in-out .25s;
   -moz-animation: ease-in-out .25s;
   -o-animation: ease-in-out .25s;
@@ -211,6 +250,7 @@ section {
   background-color: #f6f7f4;
   color: #5c96be;
   border: 2px solid #5c96be;
+  /**/
   transition: ease-in-out .25s;
   -moz-animation: ease-in-out .25s;
   -o-animation: ease-in-out .25s;
@@ -301,6 +341,7 @@ footer li a {
   letter-spacing: 1px;
   border-radius: 5px;
   text-shadow: 0 0 10px #38404c;
+  /**/
   transition: ease-in-out .25s;
   -moz-animation: ease-in-out .25s;
   -o-animation: ease-in-out .25s;
@@ -311,6 +352,7 @@ footer li a:hover {
   background-color: white;
   color: #5c97be;
   text-shadow: none;
+  /**/
   transition: ease-in-out .25s;
   -moz-animation: ease-in-out .25s;
   -o-animation: ease-in-out .25s;
@@ -326,18 +368,25 @@ footer li a:hover {
   bottom: 2px;
 }
 
-#footerbar {
+#footerBar {
+  /**/
   transition: ease-in-out .25s;
   -moz-animation: ease-in-out .25s;
   -o-animation: ease-in-out .25s;
   -webkit-animation: ease-in-out .25s;
+}
+
+#mobileFooterNav {
+  display: none;
 }
  
 
 /********************  Media Queries  ********************/
 
 @media screen and (min-width: 1690px) {
-
+  .articleSnippetDiv p, .trendingSnippetDiv p, .resultingSnippetDiv p, .editorpicks-section p {
+    margin: 0 8vw 35px 8vw;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -362,6 +411,13 @@ footer li a:hover {
     margin-top: 150px;
   }
 
+  .articleSnippetDiv p, .trendingSnippetDiv p, .resultingSnippetDiv p, .editorpicks-section p {
+    margin: 0 0 35px 0;
+  }
+
+  #mobileFooterNav {
+    display: none;
+  }
 }
 
 
@@ -375,8 +431,12 @@ footer li a:hover {
     height: 80vh;
   }
 
-  #footerbar {
+  #footerNav {
     display: none;
+  }
+  
+  #mobileFooterNav {
+    display: contents;
   }
 }
 
@@ -410,7 +470,7 @@ footer li a:hover {
   }
 
   .articleSnippetDiv a, .trendingSnippetDiv a, .resultingSnippetDiv a, .editorpicks-section a {
-    padding: 12px 30px;
+    padding: 12px 15px;
   }
 
   #queryBox {
@@ -419,6 +479,14 @@ footer li a:hover {
 
   #searchBtn {
     padding: 12px 30px;
+  }
+
+  #mobileFooterNav {
+    font-size: .85em;
+  }
+
+  #mobileFooterNav a {
+    margin: 0 5px;
   }
 
 }

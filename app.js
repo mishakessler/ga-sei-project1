@@ -13,8 +13,8 @@ const antiQuery = `${antiKeywords.replace(/, /g, " AND ")}`
 const antiQueryURL = encodeURIComponent(antiQuery);
 
 const searchURL = `${domain}${everything}sortBy=popularity&q=${antiKeywords}%20AND%20`
-const trendingURL = `${domain}${trending}q=mental%20health&sortBy=relevance`
-const everythingURL = `${domain}${everything}q=${queryURL}%20AND%20${antiQueryURL}&sortBy=relevance`
+const trendingURL = `${domain}${trending}q=mental%20health`
+const everythingURL = `${domain}${everything}q=${queryURL}%20AND%20${antiQueryURL}`
 
 //ie https://newsapi.org/v2/everything?q=mental%20health%20OR%20wellness%20OR%20mindfulness%20OR%20meditation%20OR%20tech%20OR%20apps%20AND%20NOT%20trump%20AND%20NOT%20goop%20AND%20NOT%20committed
 
@@ -155,9 +155,9 @@ window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
 
   if (prevScrollpos < currentScrollPos) {
-    document.querySelector("#footerbar").style.bottom = "-60px";
+    document.querySelector("#footerBar").style.bottom = "-60px";
   } else {
-    document.querySelector("#footerbar").style.bottom = "0";
+    document.querySelector("#footerBar").style.bottom = "0";
   }
   prevScrollpos = currentScrollPos;
 }
