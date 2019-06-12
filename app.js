@@ -110,6 +110,7 @@ renderTrending();
 
 const refreshBtn = document.querySelector('#refreshFooterIcon');
 refreshBtn.addEventListener('click', () => {
+  trendingSection.innerHTML = [];
   renderTrending();
 });
 
