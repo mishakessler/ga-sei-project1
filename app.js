@@ -13,7 +13,7 @@ const antiQuery = `${antiKeywords.replace(/, /g, " AND ")}`
 const antiQueryURL = encodeURIComponent(antiQuery);
 
 const searchURL = `${domain}${everything}sortBy=popularity&q=${antiKeywords}%20AND%20`
-const trendingURL = `${domain}${trending}q=mental%20health`
+const trendingURL = `${domain}${trending}q=health`
 const everythingURL = `${domain}${everything}q=${queryURL}%20AND%20${antiQueryURL}`
 
 //ie https://newsapi.org/v2/everything?q=mental%20health%20OR%20wellness%20OR%20mindfulness%20OR%20meditation%20OR%20tech%20OR%20apps%20AND%20NOT%20trump%20AND%20NOT%20goop%20AND%20NOT%20committed
@@ -82,7 +82,7 @@ const renderTrending = async () => {
 
   const trendings = trendingResponse.data.articles;
 
-  for (let j = 0; j < trendings.length; j += 1) {
+  for (let j = 0; j < 5; j += 1) {
 
     const trendingImg = document.createElement('div');
     trendingImg.className = "trendingImgDiv";

@@ -67,20 +67,27 @@ Mobile Mockup:
 <img src="/mobile-mockup.png">
 
 ---
-## Content Delivery
+## Domain
 
-### Hosting
-
-Dreamhost VPS _(if allowed, in lieu of Surge)_
-
-### Domain
-
-https://www.mentalhealthable.com
+https://www.mentalhealthable.surge.sh
 
 ---
 
 # Task List
 
-* Add search function to bottom of page
-* Add js hide until scroll for footer menu
-* Add responsiveness– headers, menus, img div heights, etc.
+<!-- * Add search function to bottom of page -->
+<!-- * Add js hide until scroll for footer menu -->
+<!-- * Add responsiveness– headers, menus, img div heights, etc. -->
+<!-- * Consider additional API, insprational quotes? -->
+
+## Improvements 
+
+* The API is unfortunately quite limited in relevant news stories; an "editor's picks" curated section that would have a hard coded, relevant stories would have been helpful.
+
+## Unsolved Problems
+
+* After committing to Surge, the live mobile site breaks the images. 
+
+  * (Coded as background images with 100vh, and multiple attempts at changing up the media queries, I believe each image is trying to take a height of the full HTML body– which on mobile with extensive scroll, makes each background image massive, to the point that 3 pixels take up the width of the screen.)
+
+  * On the same surge site, while viewing through Chrome Inspect or just a resized Chrome window, this doesn't happen.
