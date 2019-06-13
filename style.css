@@ -430,10 +430,8 @@ footer li a:hover {
   }
 
   .featuredImgDiv, .trendingImgDiv, .resultingImgDiv {
-    height: 35vh;
-    background-position: center center;
-    background-size: 100%;
-    background-repeat: none;
+    height: 80vh;
+    background-attachment: unset;
     transform: skewY(3deg);
     }
 
