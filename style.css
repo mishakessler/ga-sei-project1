@@ -7,6 +7,7 @@ brand colors: #f6f7f4, #86b58c, #5c96be, #738494, #38404c;
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -15,7 +16,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #5c96be;
-  overflow-x: hidden;
 }
 
 /********************  Header  ********************/
@@ -430,12 +430,18 @@ footer li a:hover {
   }
 
   .featuredImgDiv, .trendingImgDiv, .resultingImgDiv {
-    height: 70vh;
-    background-attachment: fixed;
+    height: 35vh;
     background-position: center center;
-    object-fit: cover;
+    background-size: 100%;
     background-repeat: none;
+    transform: skewY(3deg);
     }
+
+  .articleSnippetDiv, .trendingSnippetDiv, .resultingSnippetDiv {
+    margin: -10px -10px;
+    padding: 30px 30px 50px 30px;
+    border: none;
+  }
 
   #footerNav {
     display: none;
