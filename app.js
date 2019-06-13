@@ -82,8 +82,6 @@ const renderTrending = async () => {
 
   const trendings = trendingResponse.data.articles;
 
-  console.log("hello")
-
   for (let j = 0; j < 5; j += 1) {
 
     const trendingImg = document.createElement('div');
@@ -91,7 +89,7 @@ const renderTrending = async () => {
     if (!trendingImg.style.backgroundImage) {
 
       const noTrending = document.createElement('div');
-      noTrending.className = `noTrending`;
+      noTrending.className = `noTrending bounce`;
       noTrending.innerHTML = `
       Sorry, there were no trending articles found in mental health.
       Scroll down for the latest news! </br>
