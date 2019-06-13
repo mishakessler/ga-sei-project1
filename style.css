@@ -452,8 +452,12 @@ footer li a:hover {
     font-size: 7em;
   }
 
+  #trending {
+    margin-bottom: 50px;
+  }
+
   #thelatest {
-    margin-top: 150px;
+    margin-top: 125px;
   }
 
   #searching {
@@ -513,13 +517,17 @@ footer li a:hover {
     text-align: center;
   }
 
+  #trending {
+    margin-bottom: 25px;
+  }
+
   #thelatest {
-    margin-top: 125px;
+    margin-top: 100px;
     margin-bottom: 25px;
   }
 
   #searching {
-    margin-top: 125px;
+    margin-top: 100px;
     margin-bottom: 25px;
   }
 
