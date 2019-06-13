@@ -12,7 +12,7 @@ MentalHealthable will use NewsAPI V2 to feature curated feeds of content related
 
 ### Stretch Goals
 
-Utilizing the Youtube, Instagram, and Inspirational Quotes APIs to intersperse unique and original content into the curated feeds. Including advanced alt tags and descriptions for accessibility readers. 
+Utilizing the Youtube, Instagram, or Inspirational Quotes APIs to intersperse unique and original content into the curated feeds.
 
 ---
 ## Methods
@@ -79,20 +79,13 @@ https://www.mentalhealthable.surge.sh
 
 ---
 
-# Task List
-
-<!-- * Add search function to bottom of page -->
-<!-- * Add js hide until scroll for footer menu -->
-<!-- * Add responsiveness– headers, menus, img div heights, etc. -->
-<!-- * Consider additional API, insprational quotes? -->
-
 ## Improvements 
 
 * The API is unfortunately quite limited in relevant news stories; an "editor's picks" curated section that would have a hard coded, relevant stories would have been nice for relevance.
 
 ## Unsolved Problems
 
-<!-- [FIXED] After committing to Surge, the live mobile site breaks the images. 
+<!-- [Fixed with background-attachment: unset] After committing to Surge, the live mobile site breaks the images. 
 
   * (Coded as background images with 100vh, and multiple attempts at changing up the media queries, I believe each image is trying to take a height of the full HTML body– which on mobile with extensive scroll, makes each background image massive, to the point that 3 pixels take up the width of the screen.)
 

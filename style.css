@@ -314,6 +314,15 @@ section {
   -webkit-animation: ease-in-out .25s;
 }
 
+.noTrending {
+  color: white;
+}
+
+.noTrending a img {
+  margin: 25px;
+  max-width: 30px;
+}
+
 /********************  Footer  ********************/
 
 footer {

@@ -8,7 +8,7 @@ const keywords = "mental health, wellness, wellbeing, mindfulness, resilience, m
 const query = `${keywords.replace(/, /g, " OR ")}`
 const queryURL = encodeURIComponent(query);
 
-const antiKeywords = "NOT trump, NOT goop, NOT committed, NOT surveillance, NOT nfl, NOT monkeys";
+const antiKeywords = "NOT trump, NOT goop, NOT committed, NOT surveillance, NOT nfl, NOT terrill, NOT underland, NOT kensington";
 const antiQuery = `${antiKeywords.replace(/, /g, " AND ")}`
 const antiQueryURL = encodeURIComponent(antiQuery);
 
@@ -89,24 +89,29 @@ const renderTrending = async () => {
     const trendingImg = document.createElement('div');
 
     if (!trendingImg.style.backgroundImage) {
-      console.log("hi")
+
       const noTrending = document.createElement('div');
-      noTrending.innerHTML = `Sorry, there were no trending articles found in mental health.`
+      noTrending.className = `noTrending`;
+      noTrending.innerHTML = `
+      Sorry, there were no trending articles found in mental health.
+      Scroll down for the latest news! </br>
+      <a href="#thelatest"><img src="_assets/scrolldown.png"></img></a>
+    `
       trendingSection.append(noTrending);
       return
     } else {
-
       trendingImg.className = "trendingImgDiv";
       trendingImg.style.backgroundImage = `url(${trendings[j].urlToImage})`;
+
       trendingSection.append(trendingImg);
 
       const trendingSnippet = document.createElement(`div`);
       trendingSnippet.className = "trendingSnippetDiv"
       trendingSnippet.innerHTML = `
-    <h3>${trendings[j].title}</h3>
-    <h5>from ${trendings[j].source.name}</h5>
-    <p>${trendings[j].description}...</p>
-    <a href="${trendings[j].url}" target="_blank">Read More</a>
+        <h3> ${ trendings[j].title}</h3>
+        <h5>from ${trendings[j].source.name}</h5>
+        <p>${trendings[j].description}...</p>
+        <a href="${trendings[j].url}" target="_blank">Read More</a>
     `;
       trendingSection.append(trendingSnippet);
     }
@@ -119,8 +124,14 @@ renderTrending();
 // REFRESH BUTTON
 // ***************
 
-const refreshBtn = document.querySelector('#refreshFooterIcon');
-refreshBtn.addEventListener('click', () => {
+const refreshBtnFooter = document.querySelector('#refreshFooterIcon');
+refreshBtnFooter.addEventListener('click', () => {
+  trendingSection.innerHTML = [];
+  renderTrending();
+});
+
+const refreshBtnNav = document.querySelector('#refreshNavIcon');
+refreshBtnNav.addEventListener('click', () => {
   trendingSection.innerHTML = [];
   renderTrending();
 });
@@ -133,7 +144,7 @@ const renderArticles = async () => {
   const responseArticles = await axios.get(everythingURL,
     {
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${apiKey} `,
       },
     });
 
@@ -152,10 +163,10 @@ const renderArticles = async () => {
     const articleSnippet = document.createElement(`div`);
     articleSnippet.className = "articleSnippetDiv"
     articleSnippet.innerHTML = `
-    <h3>${articles[i].title}</h3>
-    <h5>from ${articles[i].source.name}</h5>
-    <p>${articles[i].description}...</p>
-    <a href="${articles[i].url}" target="_blank">Read More</a>
+        <h3> ${ articles[i].title}</h3>
+        <h5>from ${articles[i].source.name}</h5>
+        <p>${articles[i].description}...</p>
+        <a href="${articles[i].url}" target="_blank">Read More</a>
     `;
     feedSection.append(articleSnippet);
 
