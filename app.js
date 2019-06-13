@@ -4,16 +4,16 @@ const trending = "top-headlines?"
 const everything = "everything?"
 const apiKey = "72e487b123e242d9a19bd3359265a6c9";
 
-const keywords = "mental health, wellness, wellbeing, mindfulness, meditation, therapy, tech, technology, apps";
+const keywords = "mental health, wellness, wellbeing, mindfulness, resilience, meditation, self-help, therapy, tech, technology, apps, wearables, nature";
 const query = `${keywords.replace(/, /g, " OR ")}`
 const queryURL = encodeURIComponent(query);
 
-const antiKeywords = "NOT trump, NOT goop, NOT committed, NOT surveillance";
+const antiKeywords = "NOT trump, NOT goop, NOT committed, NOT surveillance, NOT nfl, NOT monkeys";
 const antiQuery = `${antiKeywords.replace(/, /g, " AND ")}`
 const antiQueryURL = encodeURIComponent(antiQuery);
 
 const searchURL = `${domain}${everything}sortBy=popularity&q=${antiKeywords}%20AND%20`
-const trendingURL = `${domain}${trending}q=health`
+const trendingURL = `${domain}${trending}q=mental%20health`
 const everythingURL = `${domain}${everything}q=${queryURL}%20AND%20${antiQueryURL}`
 
 //ie https://newsapi.org/v2/everything?q=mental%20health%20OR%20wellness%20OR%20mindfulness%20OR%20meditation%20OR%20tech%20OR%20apps%20AND%20NOT%20trump%20AND%20NOT%20goop%20AND%20NOT%20committed
@@ -82,23 +82,34 @@ const renderTrending = async () => {
 
   const trendings = trendingResponse.data.articles;
 
+  console.log("hello")
+
   for (let j = 0; j < 5; j += 1) {
 
     const trendingImg = document.createElement('div');
-    trendingImg.className = "trendingImgDiv";
-    trendingImg.style.backgroundImage = `url(${trendings[j].urlToImage})`;
 
-    trendingSection.append(trendingImg);
+    if (!trendingImg.style.backgroundImage) {
+      console.log("hi")
+      const noTrending = document.createElement('div');
+      noTrending.innerHTML = `Sorry, there were no trending articles found in mental health.`
+      trendingSection.append(noTrending);
+      return
+    } else {
 
-    const trendingSnippet = document.createElement(`div`);
-    trendingSnippet.className = "trendingSnippetDiv"
-    trendingSnippet.innerHTML = `
+      trendingImg.className = "trendingImgDiv";
+      trendingImg.style.backgroundImage = `url(${trendings[j].urlToImage})`;
+      trendingSection.append(trendingImg);
+
+      const trendingSnippet = document.createElement(`div`);
+      trendingSnippet.className = "trendingSnippetDiv"
+      trendingSnippet.innerHTML = `
     <h3>${trendings[j].title}</h3>
     <h5>from ${trendings[j].source.name}</h5>
     <p>${trendings[j].description}...</p>
     <a href="${trendings[j].url}" target="_blank">Read More</a>
     `;
-    trendingSection.append(trendingSnippet);
+      trendingSection.append(trendingSnippet);
+    }
   }
 }
 

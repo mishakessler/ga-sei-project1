@@ -67,6 +67,12 @@ Mobile Mockup:
 <img src="/mobile-mockup.png">
 
 ---
+# Delivery
+
+## Installation
+
+No special installation requirements.
+
 ## Domain
 
 https://www.mentalhealthable.surge.sh
@@ -82,12 +88,12 @@ https://www.mentalhealthable.surge.sh
 
 ## Improvements 
 
-* The API is unfortunately quite limited in relevant news stories; an "editor's picks" curated section that would have a hard coded, relevant stories would have been helpful.
+* The API is unfortunately quite limited in relevant news stories; an "editor's picks" curated section that would have a hard coded, relevant stories would have been nice for relevance.
 
 ## Unsolved Problems
 
-* After committing to Surge, the live mobile site breaks the images. 
+<!-- [FIXED] After committing to Surge, the live mobile site breaks the images. 
 
   * (Coded as background images with 100vh, and multiple attempts at changing up the media queries, I believe each image is trying to take a height of the full HTML body– which on mobile with extensive scroll, makes each background image massive, to the point that 3 pixels take up the width of the screen.)
 
-  * On the same surge site, while viewing through Chrome Inspect or just a resized Chrome window, this doesn't happen.
+  * On the same surge site, while viewing through Chrome Inspect or just a resized Chrome window, this doesn't happen. -->
