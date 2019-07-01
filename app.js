@@ -4,6 +4,8 @@ const trending = "top-headlines?"
 const everything = "everything?"
 const apiKey = "72e487b123e242d9a19bd3359265a6c9";
 
+
+
 const keywords = "mental health, wellness, wellbeing, mindfulness, resilience, meditation, self-help, therapy, tech, technology, apps, wearables, nature";
 const query = `${keywords.replace(/, /g, " OR ")}`
 const queryURL = encodeURIComponent(query);
@@ -16,7 +18,9 @@ const searchURL = `${domain}${everything}sortBy=popularity&q=${antiKeywords}%20A
 const trendingURL = `${domain}${trending}q=mental%20health`
 const everythingURL = `${domain}${everything}q=${queryURL}%20AND%20${antiQueryURL}`
 
-//ie https://newsapi.org/v2/everything?q=mental%20health%20OR%20wellness%20OR%20mindfulness%20OR%20meditation%20OR%20tech%20OR%20apps%20AND%20NOT%20trump%20AND%20NOT%20goop%20AND%20NOT%20committed
+//ie https://newsapi.org/v2/everything?q=mental%20health%20OR%20wellness%20OR%20wellbeing%20OR%20mindfulness%20OR%20resilience%20OR%20meditation%20OR%20self-help%20OR%20therapy%20OR%20tech%20OR%20technology%20OR%20apps%20OR%20wearables%20OR%20nature%20AND%20NOT%20trump%20AND%20NOT%20goop%20AND%20NOT%20committed%20AND%20NOT%20surveillance%20AND%20NOT%20nfl%20AND%20NOT%20terrill%20AND%20NOT%20underland%20AND%20NOT%20kensington
+
+
 
 const footerSection = document.querySelector("#footerbar")
 const searchSection = document.querySelector(".search-section");

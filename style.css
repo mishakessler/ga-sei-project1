@@ -408,6 +408,12 @@ footer li a:hover {
   -webkit-animation: ease-in-out .25s;
 }
 
+footer li p {
+  margin-top: 100px;
+}
+
+
+
 #hi {
   position: fixed;
   background: none;
